@@ -1,6 +1,6 @@
 # Think Linux Pad or ThinkLiPad
 
-This repository contains a collection of useful guidelines to help you streamline your tasks in Linux. These guidelines are designed for quick access to commonly needed operations or to remember certain stuff, making it easier to manage your Linux system and improve productivity.
+This repository contains a collection of useful guidelines to help me streamline my tasks in Linux (I am using `Ubuntu 22.04.5 LTS`). These guidelines are designed for quick access to commonly needed operations or to remember certain stuff, making it easier to manage your Linux system and improve productivity.
 
 Navigate to each directory for detailed, task-specific guidelines.
 
