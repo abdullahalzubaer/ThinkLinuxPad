@@ -1,0 +1,231 @@
+myvscode settings.json
+
+```json
+
+{
+    // // >>> indent-rainbow settings >>>
+    // // Using the light mode
+    // "indentRainbow.indicatorStyle": "light",
+    // // we use a simple 1 pixel wide line
+    // "indentRainbow.lightIndicatorStyleLineWidth": 1,
+    // // the same colors as above but more visible
+    // "indentRainbow.colors": [
+    // "rgba(255,255,64,0.3)",
+    // "rgba(127,255,127,0.3)",
+    // "rgba(255,127,255,0.3)",
+    // "rgba(79,236,236,0.3)"],
+    // "indentRainbow.errorColor": "rgba(128,32,32,0.6)",
+    // // <<< indent-rainbow settings <<<
+    // // "editor.bracketPairColorization.enabled": true,
+
+    "debug.toolBarLocation": "floating",
+    "[python]": {
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": "explicit"
+        },
+    },
+    "isort.args": ["--profile", "black"],
+    
+    "workbench.colorCustomizations": {
+        "notebook.cellEditorBackground": "#24242421"
+    },
+    "window.zoomLevel": 2,
+    "notebook.output.textLineLimit": 800,
+    "workbench.settings.applyToAllProfiles": [
+        "notebook.output.textLineLimit"
+    ],
+    "notebook.output.scrolling": true,
+    "notebook.lineNumbers": "on",
+    "notebook.cellToolbarLocation": {
+        "default": "right",
+        "jupyter-notebook": "right"
+    },
+    "workbench.editor.empty.hint": "hidden",
+    "editor.rulers": [
+        
+        79
+
+    ],
+"editor.tokenColorCustomizations": { // setting color for operators in python.
+    "textMateRules": [
+
+        {
+            "scope": "text.html.markdown",
+            "settings": {
+                "foreground": "#9d8d79ef" // Replace with your preferred color
+            }
+        },
+
+        {
+            // Assignment operator color
+            "scope": "keyword.operator.assignment.python",
+            "settings": {
+                "foreground": "#FF5733"
+            }
+        },
+        {
+            // Arithmetic operators (+, -, *, /, etc.)
+            "scope": "keyword.operator.arithmetic.python",
+            "settings": {
+                "foreground": "#FF5733"
+            }
+        },
+        {
+            // Comparison operators (==, !=, <, >, <=, >=)
+            "scope": "keyword.operator.comparison.python",
+            "settings": {
+                "foreground": "#FF5733"
+            }
+        },
+        {
+            // Logical operators (and, or, not)
+            "scope": "keyword.operator.logical.python",
+            "settings": {
+                "foreground": "#FF5733"
+            }
+        },
+        {
+            // Bitwise operators (&, |, ^, ~, <<, >>)
+            "scope": "keyword.operator.bitwise.python",
+            "settings": {
+                "foreground": "#FF5733"
+            }
+        },
+        {
+            // Unary operators (+, -, not)
+            "scope": "keyword.operator.unary.python",
+            "settings": {
+                "foreground": "#FF5733"
+            }
+        },
+        {
+            // Other miscellaneous operators (e.g., membership, identity)
+            "scope": [
+                "keyword.operator.membership.python",
+                "keyword.operator.identity.python"
+            ],
+            "settings": {
+                "foreground": "#FF5733"
+            }
+        },
+        {
+            // Augmented assignment operators (+=, -=, *=, /=, etc.)
+            "scope": "keyword.operator.assignment.augmented.python",
+            "settings": {
+                "foreground": "#FF5733"
+            }
+        },
+        {
+            // Full stop (dot) and comma punctuation
+            "scope": [
+                "punctuation.separator.period.python",  // for full stop `.`
+                "punctuation.separator.comma.python"    // for comma `,`
+            ],
+            "settings": {
+                "foreground": "#FF5733"
+            }
+        }
+    ]
+},
+
+    "jupyter.widgetScriptSources": [
+        "jsdelivr.com",
+        "unpkg.com"
+    ],
+    "explorer.confirmDragAndDrop": false,
+    "github.copilot.enable": {
+        "*": true,
+        "plaintext": true,
+        "markdown": true,
+        "scminput": false,
+        "shell": true,
+        "latex": true
+    },
+    "terminal.integrated.inheritEnv": false,
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 600000,
+
+    "editor.mouseWheelScrollSensitivity": 2, // setting scroll sensitivity in scripts
+    "workbench.list.mouseWheelScrollSensitivity": 2,
+    "github.copilot.editor.enableAutoCompletions": true,
+    "github.copilot.advanced": {
+    
+    },
+    "jupyter.askForKernelRestart": false,
+    "update.showReleaseNotes": false,
+    "editor.wordWrap": "on",
+    "editor.wordWrapColumn": 79,
+    "json.schemas": [
+
+    ],
+    "editor.codeActionsOnSave": {
+
+
+
+    
+    },
+    "workbench.startupEditor": "none",
+    "settingsSync.ignoredExtensions": [
+        "hbenl.vscode-test-explorer"
+    ],
+    "cSpell.userWords": [
+        "cuda",
+        "dtype",
+        "pretrained",
+        "torchaudio",
+        "torchvision"
+    ],
+    "git.decorations.enabled": false,
+    "workbench.colorTheme": "Gruvbox Minor Dark Hard",
+    "editor.pasteAs.preferences": [], // setting scroll sensitivity for jupyter notebook. Above setting didn't work for jupyter notebook.
+    
+    //
+    // LaTeX Workshop settings
+    //
+    // https://stackoverflow.com/questions/79190111/vscode-darkmode-pdf-viewer
+    // https://github.com/James-Yu/LaTeX-Workshop/wiki/View#latex-workshopviewpdfinvert
+    // https://github.com/James-Yu/LaTeX-Workshop/wiki/View#latex-workshopviewpdfinvert
+    "latex-workshop.view.pdf.invert": 0.85,
+    // "latex-workshop.view.pdf.invertMode.grayscale":1,
+    "latex-workshop.view.pdf.invertMode.sepia": 0.1,
+    "latex-workshop.view.pdf.invertMode.brightness": 0.7,
+    "editor.language.colorizedBracketPairs": [],
+
+    //The minted package calls the external program pygmentize (from Pygments) to do syntax highlighting. For security reasons, LaTeX does not allow such external calls by default. You must explicitly enable them with the -shell-escape flag.
+    // uncomment them below if you want the color
+
+    // for minted package and color in latex start here
+    // "latex-workshop.latex.tools": [
+    //     {
+    //       "name": "pdflatex",
+    //       "command": "pdflatex",
+    //       "args": [
+    //         "-synctex=1",
+    //         "-interaction=nonstopmode",
+    //         "-shell-escape",
+    //         "%DOC%"
+    //       ]
+    //     }
+    //     // You can list other tools here if needed.
+    //   ],
+    //   "latex-workshop.latex.recipes": [
+    //     {
+    //       "name": "pdflatex",
+    //       "tools": [
+    //         "pdflatex"
+    //       ]
+    //     }
+    //     // You can add additional recipes here.
+    //   ]
+    // for minted package and color in latex END here
+
+}
+// below are the one that i am using for workbench.colorCustomizations
+// https://github.com/sjarvie/vim-hybrid-vscode-theme/blob/master/themes/Hybrid-color-theme.json
+
+// gruvbox setting: https://github.com/jdinhify/vscode-theme-gruvbox/blob/main/themes/gruvbox-dark-hard.json
+//notebook change stackoverflow: https://stackoverflow.com/questions/66400494/how-to-change-cell-background-colour-of-a-vscode-jupyter-notebook
+
+
+// changing scrollbar width: https://www.reddit.com/r/vscode/comments/13genus/change_scrolling_sensitivity/
+```
